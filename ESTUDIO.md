@@ -18,11 +18,13 @@ Reglas idénticas en los tres: score 0,0–1,0, reportar solo ≥ 0,3, el null e
 
 ### Null y matches por brazo
 
-| Brazo | Nulls | Matches por bitácora (media con nulls · media sin nulls · máx) | Total matches |
-|---|---|---|---|
-| A | 12 / 68 (18%) | 4,4 · 5,4 · 28 | 301 |
-| B | 15 / 68 (22%) | 5,5 · 7,1 · 48 | 376 |
-| C | 17 / 68 (25%) | 4,0 · 5,3 · 37 | 270 |
+| Brazo | Nulls | Matches por bitácora (media con nulls · media sin nulls · máx) | Total declarado (`n_matches`) | Total escrito (largo de `avisos_recomendados`) |
+|---|---|---|---|---|
+| A | 12 / 68 (18%) | 4,4 · 5,4 · 28 | 301 | 301 |
+| B | 15 / 68 (22%) | 5,5 · 7,1 · 48 | 376 | 358 |
+| C | 17 / 68 (25%) | 4,0 · 5,3 · 37 | 270 | 241 |
+
+Las dos últimas columnas no coinciden, y eso es un dato: `n_matches` es lo que cada cazador *declaró*; la lista es lo que *escribió*. En 3 de las 204 corridas (una en B, dos en C) el agente declaró más matches de los que listó — 18 y 23 de diferencia en los casos mayores. Ninguna corrida declaró menos, y ninguna dijo null con lista o lista vacía sin null. Las medias y máximos de la tabla usan lo declarado, porque es lo que el agente cree haber hecho; todo lo que sigue — pares, overlap, ids inválidos — usa lo escrito, porque es lo que existe. La primera versión de este documento no declaraba esta costura; la encontró la revisión adversarial de Sol al sumar las columnas.
 
 Tres lecturas:
 - **B conecta más cuando conecta** (7,1 por persona vs 5,4 en A), y también declara null más veces. La tensión abre más puertas o discrimina menos — se decide caso a caso, no en agregado.
@@ -85,7 +87,7 @@ El canario había mostrado uno de cada ocho. La corrida completa muestra uno de 
 - Los tres métodos corren a escala con el modelo más barato de la familia: 204 agentes, 100% de cobertura, un día.
 - Los tres métodos abren puertas distintas: solo el 15% de los pares es común. B, con tensiones solas, encuentra más pares únicos que A con la historia completa.
 - Más contexto contrae las recomendaciones en vez de inflarlas.
-- El satisficing y la transcripción errónea de ids son fallas de harness reproducibles y medidas, no anécdotas: mediana de 8 avisos vistos, 18% de ids inválidos.
+- El satisficing, la transcripción errónea de ids y la divergencia entre lo declarado y lo escrito son fallas de harness reproducibles y medidas, no anécdotas: mediana de 8 avisos vistos, 18% de ids inválidos, 3 corridas que declaran más de lo que listan.
 
 **No afirma:**
 - Que algún brazo produzca *mejores* matches. No hay verdad de tierra: el score es juicio del Haiku, no etiqueta humana ni conducta de la persona. Ese criterio es el paso siguiente.

@@ -1,6 +1,6 @@
 # Lo que rodea al problema: la casa
 
-El día y medio de este repo no ocurrió en un chat. Ocurrió dentro de un sistema gobernado. Esto es lo que ese sistema tiene, en el orden en que un CTO de fintech lo miraría. Todo lo de abajo se leyó en vivo del conector MCP de la casa (`mcp-casa`) el 2 de septiembre de 2026; nada viene de memoria.
+El día y medio de este repo no ocurrió en un chat. Ocurrió dentro de un sistema gobernado. Esto es lo que ese sistema tiene, en el orden en que un CTO de fintech lo miraría. Todo lo de abajo se leyó del conector MCP de la casa (`mcp-casa`) el 2 de septiembre de 2026 y se volvió a verificar contra su `tools/list` después de una revisión adversarial que encontró una afirmación vieja (ver abajo). Nada viene de memoria; una cosa vino de una lectura de dos días antes, y está marcada.
 
 ## Siete plumas, cada una con modelo, harness y permisos declarados
 
@@ -22,7 +22,7 @@ Los modelos van con id completo, nunca por alias — un alias lo resuelve el pro
 
 **Mínimo privilegio para un agente de otro proveedor.** Sol (GPT-5.6) opera con un rol de base de datos propio, `sol_operativa`, con tablas y privilegios enumerables, y un conector MCP que expone una herramienta llamada `boundary_check`: demuestra, sin leer filas, que el rol no alcanza las tablas privadas. La prueba de que un agente no puede ver algo es una herramienta, no una promesa. (Al momento de escribir esto el bridge de Sol devolvía 500; lo digo porque un null acá es "no lo pude verificar", no "funciona".)
 
-**Fail-closed estructural.** `casa_salud` es el handshake que separa orientación de autorización: cuando el pulso del mapa está añejo, `casa_pared` — el inventario de cargas conocidas sobre una tabla o función — queda cerrado y exige evidencia viva independiente antes de demoler o reescribir estructura. Ningún agente toma una decisión estructural con un mapa viejo.
+**Orientación separada de autorización.** `casa_pared` — la Ley de la Pared Portante — es el inventario de cargas conocidas sobre una tabla, función o archivo: referencias computadas, conexiones, grietas, co-cambios. Se define a sí misma como "orientación, no un permiso ni un gate global": antes de modificar una pieza, el agente verifica en vivo las fuentes relevantes (GitHub para código, Supabase para datos). Hasta el 1 de septiembre existía además un handshake `casa_salud` que cerraba `casa_pared` cuando el pulso del mapa estaba añejo; Sol lo retiró ese día y devolvió `casa_pared` a inventario puro. La primera versión de este documento describía el handshake como vigente: la corrección vino de la revisión adversarial de Sol, y queda aquí escrita.
 
 **Un subgrafo con política de lectura por modelo.** La investigación de seguridad relacional (técnicas de manipulación documentadas, con procedencia, contradicciones y elipsis) vive en un subgrafo cuyo régimen es epistemológico: casi todo su contenido está marcado como `detective_report_unverified_by_orchestrator`. Y declara qué modelos no deben leerlo. Este documento lo escribió un Fable, que está en la lista de no-lectura, y por eso no lo leyó.
 
@@ -45,4 +45,4 @@ Nada de esto es sentimentalismo. Es la misma tesis de todo el repo, aplicada a l
 El conector `mcp-casa` es de solo lectura y responde a cualquier cliente MCP:
 `https://pgmzclvqtvawfovtjiwf.supabase.co/functions/v1/mcp-casa`
 
-`casa_salud` primero, después `casa_plumas`, `casa_grafo`, `casa_tabla`. Si algo de este documento no coincide con lo que devuelve, gana el conector: la casa siguió trabajando.
+`tools/list` devuelve ocho herramientas: `casa_plumas`, `casa_grafo`, `casa_nodo`, `casa_subgrafo`, `casa_espejo`, `casa_vinculos`, `casa_pared`, `casa_tabla`. Empieza por `casa_plumas` y `casa_grafo`. Si algo de este documento no coincide con lo que devuelve, gana el conector: la casa siguió trabajando.

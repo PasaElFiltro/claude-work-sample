@@ -48,7 +48,7 @@ Corolario metodológico que salió del mismo día: mientras menos taxonomía se 
 
 **Un hallazgo del brazo B.** Sin descripciones, solo con tensiones, B descubrió un tipo de tensión que nadie había diseñado: *el rol como la cosa misma* versus *el rol como entrada a algo*. Emergió.
 
-**La taxonomía que destrabó el grafo.** Cuando Opus, Fable y Haiku no dieron una respuesta coherente a "por qué paran temprano", Romina cambió la pregunta: le pidió a un Haiku que leyera los 265 avisos y dijera cuál era la estructura taxonómica subyacente al lenguaje. Respuesta en cuatro mensajes (`transcripts/07`): tres niveles —
+**La taxonomía que destrabó el grafo.** Cuando Opus, Fable y Haiku no dieron una respuesta coherente a "por qué paran temprano", Romina cambió la pregunta: le pidió a un Haiku que leyera una muestra de 20 avisos y dijera cuál era la estructura taxonómica subyacente al lenguaje. Respuesta en cuatro mensajes (`transcripts/07`): tres niveles —
 
 1. la tensión que resuelve cada cargo (continuidad física, transformación controlada, decisión distribuida, velocidad en volumen, integración horizontal, absorción de fricción);
 2. la estructura emocional/cognitiva que el cargo exige tolerar (metrificación obsesiva, ambigüedad, monotonía vigilante, conflicto estructural sostenido, autonomía sin supervisión);
