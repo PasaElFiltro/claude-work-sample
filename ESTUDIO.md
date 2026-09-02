@@ -93,10 +93,12 @@ El canario había mostrado uno de cada ocho. La corrida completa muestra uno de 
 - Que algún brazo produzca *mejores* matches. No hay verdad de tierra: el score es juicio del Haiku, no etiqueta humana ni conducta de la persona. Ese criterio es el paso siguiente.
 - Que la lectura de tensión sea la representación correcta. Las aristas semánticas del grafo siguen en null hasta que dos lectores independientes coincidan.
 - Nada sobre significancia. Una réplica por brazo: no se puede separar "efecto del método" de "esta instancia leyó así". Sol pidió dos réplicas mínimas; queda pendiente.
+- Que la taxonomía de tres niveles sea la estructura correcta. La propuso una instancia sobre 20 avisos tomados por `LIMIT`, sin aleatorizar (`transcripts/07`). Contar el nivel 3 sobre 265 prueba que las señales existen y se pueden contar; no prueba que otra instancia sobre otra muestra hubiera cortado igual. La prueba pendiente es la regla de la casa aplicada a la taxonomía: dos sondas independientes sobre muestras distintas, y ver qué sobrevive.
 
 ## Lo que sigue
 
 1. Harness v4: validación de ids en código antes de persistir, piso mínimo de exploración, tope y ranking de recomendaciones. (Hay batches `v4` del 1 de septiembre en la tabla; no se analizan aquí.)
+1b. Replicar la taxonomía: dos Haikus, dos muestras aleatorias de 20, sin ver la estructura existente. Lo que coincida entra; lo que no, se discute.
 2. Segunda réplica por brazo.
 3. Pirámide de Haikus para poblar `tension_resuelve` y `costo_cobra` con dos réplicas coincidentes.
 4. Klaviyo: cada usuario recibe las recomendaciones de un brazo asignado al azar; se mide si postula. Ahí aparece la verdad de tierra.
