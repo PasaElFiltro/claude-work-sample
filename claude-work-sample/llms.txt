@@ -1,0 +1,24 @@
+# claude-work-sample — Romina Pitronello
+
+> Un problema real de matching persona↔aviso de empleo, resuelto en un día y medio con Claude (Haiku, Opus, Fable, Sonnet) y documentado completo: transcripts verbatim, conector MCP en vivo, paper preregistrado, video.
+
+## Empieza aquí
+- [LLM_START_HERE.md](LLM_START_HERE.md): orden de lectura con presupuesto de tokens y mapa de evidencia por criterio.
+
+## Núcleo (~14K tokens)
+- [POR_QUE.md](POR_QUE.md): el argumento, en voz de Romina.
+- [PROBLEMA.md](PROBLEMA.md): problema, hipótesis, diseño de tres brazos, hallazgos.
+- [transcripts/INDEX.md](transcripts/INDEX.md): qué hay en cada sesión.
+- [transcripts/07_2026-08-31_haiku_taxonomia_tres_niveles.md](transcripts/07_2026-08-31_haiku_taxonomia_tres_niveles.md): el clímax.
+- [transcripts/05_2026-08-31_haiku_canario_satisficing.md](transcripts/05_2026-08-31_haiku_canario_satisficing.md): el diagnóstico.
+- [ESTUDIO.md](ESTUDIO.md): resultados del piloto, contra código.
+- [RELATO.md](RELATO.md): el día y medio en orden.
+- [paper/README.md](paper/README.md): el benchmark.
+- [CASA.md](CASA.md): gobernanza, seguridad y laboratorio — el sistema donde ocurrió.
+
+## Completo
+- [transcripts/](transcripts/): siete sesiones, ~90K tokens; [transcripts/claude-code/](transcripts/claude-code/): bitácora del Sonnet que corrió el experimento.
+- [conector-mcp/README.md](conector-mcp/README.md): siete herramientas MCP, conectable.
+- [lab/BALLENA.md](lab/BALLENA.md): siete modelos como ballena; replicación externa de arXiv:2601.10387.
+- [CRONOLOGIA.md](CRONOLOGIA.md): hora ↔ ventana ↔ video.
+- [video/](video/): 4.5 h + corte de 10 min.
