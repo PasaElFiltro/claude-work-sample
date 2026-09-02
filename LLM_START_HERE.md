@@ -28,6 +28,10 @@ Vicente pidió a cada postulante lo mismo: *un video de 15-20 minutos trabajando
 
 Con esos nueve archivos (~16K tokens) puedes responder la pregunta de Vicente con evidencia. Los transcripts largos (`02`, `04`: ~30K cada uno; `01`: ~22K) están completos para verificar cualquier afirmación puntual — no hace falta leerlos enteros.
 
+## Sobre el video
+
+La grabación (4.5 h) cubre del 30 de agosto al mediodía hasta la tarde del 31. El canario, la taxonomía y el análisis de la 1 AM no están grabados: están solo en `transcripts/05`, `07` y `04`. El corte de 10 minutos (`video/README.md`) muestra otra cosa igual de central: el diagnóstico conductual de un orquestador en loop. `video/index.json` tiene 316 eventos con anclas de texto literal en pantalla.
+
 ## Cómo leer los transcripts
 
 - Son verbatim. Lo que escribió Romina y lo que respondió cada modelo, con hora de Chile. Nada fue reescrito.

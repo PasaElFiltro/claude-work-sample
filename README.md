@@ -23,7 +23,7 @@ En 20 minutos no se ve lo que hago. Mi destreza parte por construir benchmarks y
 
 ## Si tienes 10 minutos
 
-Mira el corte en `video/`. Es el momento en que el experimento no cuadró, tres modelos no supieron decir por qué, y la salida fue cambiar la pregunta.
+Mira el corte en `video/`: un Sonnet orquestador lleva veinte minutos en loop, y en diez minutos se ve cómo lo diagnostico (con una hipótesis sobre su conducta, no sobre su código), qué me devuelven dos modelos, y cómo reescribo el prompt. Los tres criterios que pediste, en ese orden.
 
 ## Si tienes un Claude
 
