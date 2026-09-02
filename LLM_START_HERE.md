@@ -30,7 +30,7 @@ Con esos nueve archivos (~16K tokens) puedes responder la pregunta de Vicente co
 
 ## Sobre el video
 
-La grabación (4.5 h, cinco archivos, reloj del Mac visible en pantalla) cubre el lunes 31 de agosto de 11:15 a 15:40. El canario, la taxonomía y el análisis de la 1 AM no están grabados: están solo en `transcripts/05`, `07` y `04`. El corte de 10 minutos (`video/corte_10min_perplexity.mp4`, tabla en `video/README.md`) muestra otra cosa igual de central: el diagnóstico conductual de un orquestador en loop. `video/index.corrected.json` tiene 316 eventos con hora de reloj real y anclas de texto literal en pantalla; el original de Gemini queda como `index.raw.json` con su script de corrección al lado.
+La grabación (4.5 h, cinco archivos, reloj del Mac visible en pantalla) cubre el lunes 31 de agosto de 11:14:27 a 15:38:33. El canario, la taxonomía y el análisis de la 1 AM no están grabados: están solo en `transcripts/05`, `07` y `04`. El corte de 10 minutos (`video/corte_10min_perplexity.mp4`, tabla en `video/README.md`) muestra otra cosa igual de central: el diagnóstico conductual de un orquestador en loop. `video/index.corrected.json` tiene 316 eventos con hora de reloj real y anclas de texto literal en pantalla; el original de Gemini queda como `index.raw.json` con su script de corrección al lado.
 
 ## Cómo leer los transcripts
 

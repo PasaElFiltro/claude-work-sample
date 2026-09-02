@@ -77,14 +77,14 @@ Las nueve personas con null en los tres brazos tienen perfiles sin representaci�
 
 ### Ids inventados
 
-De 900 matches reportados, **160 (18%) apuntan a un aviso que no existe**: UUIDs bien formados que no están en el universo v2, ni en el v1, ni en la tabla de vacantes externas. 42 ids distintos, 38 de las 204 corridas afectadas. En 53 de los 160 el título sí corresponde a un aviso real — el cazador vio el aviso correcto y transcribió mal el id. En los otros 107 no hay título que coincida. 26 de los ids falsos se repiten entre corridas distintas, lo que sugiere un error sistemático de transcripción más que invención libre.
+De los 900 matches listados, **160 (18%) apuntan a un aviso que no existe**: UUIDs bien formados que no están en el universo v2, ni en el v1, ni en la tabla de vacantes externas. 42 ids distintos, 38 de las 204 corridas afectadas. En 53 de los 160 el título sí corresponde a un aviso real — el cazador vio el aviso correcto y transcribió mal el id. En los otros 107 no hay título que coincida. 26 de los ids falsos se repiten entre corridas distintas, lo que sugiere un error sistemático de transcripción más que invención libre.
 
 El canario había mostrado uno de cada ocho. La corrida completa muestra uno de cada 5,6. La regla escrita el 31 de agosto — validar cada id contra el universo en código antes de persistir — no estaba activa en v3 porque cada Haiku insertaba su propio resultado. Todos los conteos de este documento excluyen los ids inválidos.
 
 ## Qué afirma este estudio y qué no
 
 **Afirma:**
-- Los tres métodos corren a escala con el modelo más barato de la familia: 204 agentes, 100% de cobertura, un día.
+- Los tres métodos corren a escala con el modelo más barato de la familia: 204/204 ejecuciones completadas, un día.
 - En esta corrida, los tres brazos divergieron fuertemente: solo el 15% de los pares es común, y B, con tensiones solas, encontró más pares únicos que A con la historia completa. Consistente con la hipótesis; pendiente de réplica.
 - En esta corrida, más contexto contrajo las recomendaciones en vez de inflarlas.
 - El satisficing, la transcripción errónea de ids y la divergencia entre lo declarado y lo escrito son fallas de harness reproducibles y medidas, no anécdotas: mediana de 8 avisos vistos, 18% de ids inválidos, 3 corridas que declaran más de lo que listan.

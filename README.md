@@ -16,7 +16,7 @@ En 20 minutos no se ve lo que hago. Mi destreza parte por construir benchmarks y
 | `transcripts/` | Siete sesiones con Claude (Haiku, Opus, Fable), verbatim. Lo que escribí yo y lo que respondieron. Índice en `transcripts/INDEX.md`. | tu Claude |
 | `conector-mcp/` | El conector MCP que se construyó durante el trabajo — *Tensión isométrica* — con sus siete herramientas documentadas. | tu Claude puede conectarse |
 | `paper/` | El estudio preregistrado sobre variabilidad inter-instancia (enviado a *Behavior Research Methods*). Es el benchmark del que hablaba. | tu Claude |
-| `CASA.md` | Lo que rodea al problema: siete plumas con permisos declarados, inspector de prompt injection, mínimo privilegio para un agente de otro proveedor, fail-closed, un incidente de costo. Y lo que un CTO no va a reconocer. | los dos |
+| `CASA.md` | Lo que rodea al problema: siete plumas con permisos declarados, inspector de prompt injection, mínimo privilegio para un agente de otro proveedor, orientación separada de autorización, un incidente de costo. Y lo que un CTO no va a reconocer. | los dos |
 | `lab/` | El experimento de la ballena: siete modelos, un system prompt, una sonda conductual inspirada en *The Assistant Axis*. Ocio fecundo. | tu Claude |
 | `video/` | El corte de 10 minutos (en el repo) y el video completo (4.5 h, cinco archivos en Drive), con índice corregido a hora de reloj. Reloj visible en pantalla. | tú |
 | `CRONOLOGIA.md` | Tabla hora ↔ ventana ↔ minuto de video. | tu Claude |
