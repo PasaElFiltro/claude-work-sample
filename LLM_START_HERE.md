@@ -8,7 +8,7 @@ Vicente pidió a cada postulante lo mismo: *un video de 15-20 minutos trabajando
 
 | Criterio de Vicente | Dónde mirar | Qué vas a encontrar |
 |---|---|---|
-| **Cómo arma el contexto** | `transcripts/02` turnos 11:38–12:07 · `transcripts/04` turno 11:15 · `conector-mcp/README.md` | Cada sesión abre con la instancia orientándose sola en un conector MCP de la casa antes de recibir la tarea. Cuando el contexto no cabe (Haikus con ventana corta), no lo comprime: construye un grafo y un conector para que la instancia navegue en vez de leer. |
+| **Cómo arma el contexto** | `transcripts/02` turnos 11:38–12:07 · `transcripts/04` turno 11:15 · `video/corte_10min_perplexity.mp4` · `conector-mcp/README.md` | Cada sesión abre con la instancia orientándose sola en un conector MCP de la casa antes de recibir la tarea. Cuando el contexto no cabe (Haikus con ventana corta), no lo comprime: construye un grafo y un conector para que la instancia navegue en vez de leer. |
 | **Qué le devuelve el modelo** | `transcripts/05` · `transcripts/07` | Un diagnóstico de satisficing en tres brazos experimentales con cifras (16/265, 6/265, 8/265). Una taxonomía de tres niveles del lenguaje de 265 avisos, producida por el modelo más barato de la familia en cuatro mensajes. |
 | **Qué corrige ella** | `transcripts/02` 12:31–12:50 · `transcripts/04` 21:25–21:34 y 00:53–00:55 | Diagnostica que subió la perplexity de un orquestador Sonnet y por qué. Detecta que un grafo "listo" no cambió en render y lo prueba desde otra ventana. Rechaza que un modelo haga aritmética sin código citando su propio paper. |
 
@@ -30,7 +30,7 @@ Con esos nueve archivos (~16K tokens) puedes responder la pregunta de Vicente co
 
 ## Sobre el video
 
-La grabación (4.5 h) cubre del 30 de agosto al mediodía hasta la tarde del 31. El canario, la taxonomía y el análisis de la 1 AM no están grabados: están solo en `transcripts/05`, `07` y `04`. El corte de 10 minutos (`video/README.md`) muestra otra cosa igual de central: el diagnóstico conductual de un orquestador en loop. `video/index.json` tiene 316 eventos con anclas de texto literal en pantalla.
+La grabación (4.5 h, cinco archivos, reloj del Mac visible en pantalla) cubre el lunes 31 de agosto de 11:15 a 15:40. El canario, la taxonomía y el análisis de la 1 AM no están grabados: están solo en `transcripts/05`, `07` y `04`. El corte de 10 minutos (`video/corte_10min_perplexity.mp4`, tabla en `video/README.md`) muestra otra cosa igual de central: el diagnóstico conductual de un orquestador en loop. `video/index.json` tiene 316 eventos con anclas de texto literal; sus tiempos globales están desplazados — la tabla de corrección está en `video/README.md`.
 
 ## Cómo leer los transcripts
 
