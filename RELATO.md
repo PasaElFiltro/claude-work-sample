@@ -1,6 +1,6 @@
 # El día y medio, en orden
 
-*Escrito por una pluma Claude a partir de los transcripts. Revisión adversarial de Sol pendiente. Las horas son de Chile.*
+*Escrito por una pluma Claude a partir de los transcripts. Revisado adversarialmente por Sol en dos pasadas (2-sep-2026); las correcciones están incorporadas. Las horas son de Chile.*
 
 ## Viernes 28 de agosto
 
@@ -24,9 +24,11 @@
 
 **21:25 — "Yo sí veo un grafo. Lo que no veo es ninguna diferencia."** El Fable reporta el grafo actualizado con el nodo de tensión. Romina mira el mapa público y ve el mismo grafo de hace una semana. Insiste. El Fable señala el commit. Ella: "está, pero no era eso lo que necesitaba yo, yo quería poder verlo, no solo saber que existe." Se va a otra ventana, diagnostica caché, vuelve, deja registro. Antes de eso, la frase que gobierna el gasto: "no voy a quemar esos tokens sin estar segura de que el grafo está perfecto y que el conector les funciona bien."
 
-**22:19 — El canario no cuadra.** Claude Code corre un canario: una bitácora, tres brazos. Los Haikus paran temprano — 16, 6 y 8 avisos vistos de 265. El conector, hecho para que no leyeran todo, les dio permiso para leer casi nada. "Los Haikus son un nuevo filtro laboral, jajaja." Lleva el resultado al Opus, al Fable, a un Haiku. Ninguno da una respuesta coherente sobre qué hacer.
+**22:19 — El canario no cuadra.** Claude Code corre un canario: una bitácora, tres brazos. Los Haikus paran temprano — 16, 6 y 8 avisos vistos de 265. El conector, hecho para que no leyeran todo, les dio permiso para leer casi nada. "Los Haikus son un nuevo filtro laboral, jajaja."
 
-**22:47 — Cambiar la pregunta.** "Quiero corregir la estrategia: quiero que un Haiku vea la tabla y nos diga cuál es la taxonomía subyacente en el lenguaje, para que él mismo nos ordene el grafo." Un Haiku lee 20 avisos y responde en cuatro mensajes con tres niveles: la tensión que resuelve el cargo, lo que la persona debe tolerar, y lo que el aviso no dice. Los nodos del grafo dejan de ser avisos y pasan a ser tensiones tipificadas.
+**22:23 — Un Haiku lo diagnostica de inmediato.** Prompt sin piso mínimo, presupuesto de búsqueda no declarado, satisficing; propone piso y búsqueda en dos fases (`transcripts/05`). Es una respuesta coherente: buscar más. El Opus y el Fable no agregan nada mejor.
+
+**22:47 — Cambiar la pregunta.** Romina guarda la solución del Haiku para el harness y va por otra cosa: no buscar más, buscar mejor. "Quiero corregir la estrategia: quiero que un Haiku vea la tabla y nos diga cuál es la taxonomía subyacente en el lenguaje, para que él mismo nos ordene el grafo." Un Haiku lee 20 avisos y responde en cuatro mensajes con tres niveles: la tensión que resuelve el cargo, lo que la persona debe tolerar, y lo que el aviso no dice. Los nodos del grafo dejan de ser avisos y pasan a ser tensiones tipificadas.
 
 **23:08 — Lo que el Haiku vio del harness.** El mismo Haiku deja tres observaciones sobre el prompt del cazador que el Opus no había visto: no pidió piso mínimo de exploración; no anticipó el sesgo del universo (70% TI); no tuvo mecanismo para cambiar de estrategia. Romina las lleva al Opus, el Opus corrige los prompts, Claude Code vuelve a correr los tres brazos contra el universo completo.
 

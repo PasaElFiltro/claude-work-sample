@@ -27,8 +27,8 @@ Reglas idénticas en los tres: score 0,0–1,0, reportar solo ≥ 0,3, el null e
 Las dos últimas columnas no coinciden, y eso es un dato: `n_matches` es lo que cada cazador *declaró*; la lista es lo que *escribió*. En 3 de las 204 corridas (una en B, dos en C) el agente declaró más matches de los que listó — 18 y 23 de diferencia en los casos mayores. Ninguna corrida declaró menos, y ninguna dijo null con lista o lista vacía sin null. Las medias y máximos de la tabla usan lo declarado, porque es lo que el agente cree haber hecho; todo lo que sigue — pares, overlap, ids inválidos — usa lo escrito, porque es lo que existe. La primera versión de este documento no declaraba esta costura; la encontró la revisión adversarial de Sol al sumar las columnas.
 
 Tres lecturas:
-- **B conecta más cuando conecta** (7,1 por persona vs 5,4 en A), y también declara null más veces. La tensión abre más puertas o discrimina menos — se decide caso a caso, no en agregado.
-- **C, el brazo con toda la información, es el más conservador**: más nulls y menos matches totales. Más contexto no infló las recomendaciones; las contrajo. Es lo contrario de lo que hace un buscador por palabras.
+- **B conectó más cuando conectó** (7,1 por persona vs 5,4 en A), y también declaró null más veces. Si la tensión abre más puertas o discrimina menos se decide caso a caso, no en agregado.
+- **C, el brazo con toda la información, fue el más conservador**: más nulls y menos matches totales. En esta corrida, más contexto no infló las recomendaciones; las contrajo. No hay baseline por palabras clave en este experimento, así que no se compara con uno.
 - Score medio casi idéntico en los tres (0,50–0,51). Lo que cambia entre brazos no es cuánta confianza declara el cazador, sino a qué avisos se la asigna.
 
 ### ¿Abren las mismas puertas?
@@ -45,7 +45,7 @@ Tres lecturas:
 | B y C, no A | 38 |
 | A y B, no C | 33 |
 
-Este es el hallazgo central del piloto. **Solo el 15% de los pares es recomendado por los tres métodos.** B — leyendo únicamente tensiones, sin ver un solo cargo ni descripción — produce 155 pares que ni A ni C encontraron: más que cualquier otro brazo en solitario. La lectura de tensión no replica al texto crudo con otro nombre; mira otra cosa. Si esa otra cosa vale, lo dirá el criterio externo (la persona postula o no). Pero la hipótesis de que "la tensión encuentra puertas distintas" ya no es una intuición: es un conteo.
+Este es el resultado central del piloto. **Solo el 15% de los pares es recomendado por los tres brazos.** B — leyendo únicamente tensiones, sin ver un solo cargo ni descripción — produjo 155 pares que ni A ni C encontraron: más que cualquier otro brazo en solitario. En esta corrida, los tres brazos divergieron fuertemente. Eso es consistente con la hipótesis de que la lectura de tensión mira otra cosa que el texto crudo, y justifica replicarla; no la prueba, porque con una instancia por brazo la divergencia puede ser de instancia y no de método. Si esa otra cosa vale, lo dirá el criterio externo: la persona postula o no.
 
 ### Acuerdo entre brazos sobre el null
 
@@ -73,7 +73,7 @@ Las nueve personas con null en los tres brazos tienen perfiles sin representaci�
 | B | 7 | 12,7 | 265 | 1 |
 | C | 8 | 8,8 | 23 | 2 |
 
-**La mediana es 8 de 265 (3%) en los tres brazos.** El satisficing que el canario mostró (`transcripts/05`) se reprodujo a escala: la mayoría de los cazadores profundizó en menos de diez avisos antes de decidir. Las medias altas de A y B las producen unos pocos agentes que barrieron los 265. El piso mínimo de exploración que el Haiku pidió a las 23:08 del 31 de agosto no estaba en el harness de esta corrida.
+**La mediana es 7–8 de 265 (3%) en los tres brazos.** El satisficing que el canario mostró (`transcripts/05`) se reprodujo a escala: la mayoría de los cazadores profundizó en menos de diez avisos antes de decidir. Las medias altas de A y B las producen unos pocos agentes que barrieron los 265. El piso mínimo de exploración que el Haiku pidió a las 23:08 del 31 de agosto no estaba en el harness de esta corrida.
 
 ### Ids inventados
 
@@ -85,20 +85,20 @@ El canario había mostrado uno de cada ocho. La corrida completa muestra uno de 
 
 **Afirma:**
 - Los tres métodos corren a escala con el modelo más barato de la familia: 204 agentes, 100% de cobertura, un día.
-- Los tres métodos abren puertas distintas: solo el 15% de los pares es común. B, con tensiones solas, encuentra más pares únicos que A con la historia completa.
-- Más contexto contrae las recomendaciones en vez de inflarlas.
+- En esta corrida, los tres brazos divergieron fuertemente: solo el 15% de los pares es común, y B, con tensiones solas, encontró más pares únicos que A con la historia completa. Consistente con la hipótesis; pendiente de réplica.
+- En esta corrida, más contexto contrajo las recomendaciones en vez de inflarlas.
 - El satisficing, la transcripción errónea de ids y la divergencia entre lo declarado y lo escrito son fallas de harness reproducibles y medidas, no anécdotas: mediana de 8 avisos vistos, 18% de ids inválidos, 3 corridas que declaran más de lo que listan.
 
 **No afirma:**
 - Que algún brazo produzca *mejores* matches. No hay verdad de tierra: el score es juicio del Haiku, no etiqueta humana ni conducta de la persona. Ese criterio es el paso siguiente.
 - Que la lectura de tensión sea la representación correcta. Las aristas semánticas del grafo siguen en null hasta que dos lectores independientes coincidan.
-- Nada sobre significancia. Una réplica por brazo: no se puede separar "efecto del método" de "esta instancia leyó así". Sol pidió dos réplicas mínimas; queda pendiente.
+- Nada sobre significancia ni sobre causa. Una réplica por brazo: no se puede separar "efecto del método" de "esta instancia leyó así". Todo lo que arriba dice "B encontró" o "C fue más conservador" describe esta corrida; atribuirlo al método requiere la réplica que Sol pidió y que queda pendiente.
 - Que la taxonomía de tres niveles sea la estructura correcta. La propuso una instancia sobre 20 avisos tomados por `LIMIT`, sin aleatorizar (`transcripts/07`). Contar el nivel 3 sobre 265 prueba que las señales existen y se pueden contar; no prueba que otra instancia sobre otra muestra hubiera cortado igual. La prueba pendiente es la regla de la casa aplicada a la taxonomía: dos sondas independientes sobre muestras distintas, y ver qué sobrevive.
 
 ## Lo que sigue
 
 1. Harness v4: validación de ids en código antes de persistir, piso mínimo de exploración, tope y ranking de recomendaciones. (Hay batches `v4` del 1 de septiembre en la tabla; no se analizan aquí.)
-1b. Replicar la taxonomía: dos Haikus, dos muestras aleatorias de 20, sin ver la estructura existente. Lo que coincida entra; lo que no, se discute.
+1b. Replicar la taxonomía separando las dos fuentes de variación: dos Haikus independientes sobre la **misma** muestra aleatoria S1 (varianza inter-instancia), y después la estructura transportada a una segunda muestra S2 — o directamente 2 muestras × 2 instancias, cuatro sondas baratas. Si se usan dos instancias sobre dos muestras distintas, una divergencia no se puede atribuir ni a la instancia ni a la muestra. El paper de `paper/` existe porque esa distinción importa.
 2. Segunda réplica por brazo.
 3. Pirámide de Haikus para poblar `tension_resuelve` y `costo_cobra` con dos réplicas coincidentes.
 4. Klaviyo: cada usuario recibe las recomendaciones de un brazo asignado al azar; se mide si postula. Ahí aparece la verdad de tierra.

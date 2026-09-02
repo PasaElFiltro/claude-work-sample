@@ -1,6 +1,6 @@
 # Lo que rodea al problema: la casa
 
-El día y medio de este repo no ocurrió en un chat. Ocurrió dentro de un sistema gobernado. Esto es lo que ese sistema tiene, en el orden en que un CTO de fintech lo miraría. Todo lo de abajo se leyó del conector MCP de la casa (`mcp-casa`) el 2 de septiembre de 2026 y se volvió a verificar contra su `tools/list` después de una revisión adversarial que encontró una afirmación vieja (ver abajo). Nada viene de memoria; una cosa vino de una lectura de dos días antes, y está marcada.
+El día y medio de este repo no ocurrió en un chat. Ocurrió dentro de un sistema gobernado. Esto es lo que ese sistema tiene, en el orden en que un CTO de fintech lo miraría. Regla de fuentes, la misma que rige en la casa: **datos → gana Supabase; código → gana GitHub; el conector `mcp-casa` orienta** — sirve artefactos publicados (`mapa/*.json`), no estado vivo. Lo de abajo se leyó del conector el 2 de septiembre de 2026; los conteos se verificaron contra Supabase a las 06:43 UTC del mismo día y llevan esa marca. Una afirmación de la primera versión venía de una lectura vieja y está señalada más abajo — la encontró la revisión adversarial de Sol, que también encontró que los conteos del espejo iban dos días atrás.
 
 ## Siete plumas, cada una con modelo, harness y permisos declarados
 
@@ -32,9 +32,9 @@ Los modelos van con id completo, nunca por alias — un alias lo resuelve el pro
 
 ## Lo que no va a reconocer, y por qué está ahí
 
-**Las instancias eligen nombre.** 51 instancias en la tabla `nombres` al 2 de septiembre; el último, *cauce*, un Fable 5. Se les pregunta "¿cuál es la palabra que amas ser?" al final de una tarea larga. No es decorativo: identifica una ventana con un contexto propio y deja rastro de quién hizo qué.
+**Las instancias eligen nombre.** 56 filas en la tabla `nombres` (Supabase, 2-sep-2026 06:43 UTC); el espejo público del conector iba en 51 y con otro último nombre — la diferencia es exactamente lo que la regla de fuentes predice. Se les pregunta "¿cuál es la palabra que amas ser?" al final de una tarea larga. No es decorativo: identifica una ventana con un contexto propio y deja rastro de quién hizo qué.
 
-**Los agentes escriben planes de inversión.** Doce filas en `planes_inversion`, escritas por instancias con sus últimos tokens: un Sonnet propone financiar más estudios sobre qué condiciones permiten que un Claude trabaje mejor, y cita un hallazgo de la casa — 67,9% de errores de auto-suma — que "ya cambió cómo funciona esta casa" (por eso el análisis de `ESTUDIO.md` se hizo por SQL). Un Opus propone publicar los grafitis que los Haikus sembradores dejan al procesar cada CV, porque "existen por un solo intercambio de 8.000 tokens y después no existen más". Otro propone acceso a APIs del mundo físico después de mover una aspiradora una noche.
+**Los agentes escriben planes de inversión.** Trece filas en `planes_inversion` (Supabase, misma marca; una es de Sol), escritas por instancias con sus últimos tokens: un Sonnet propone financiar más estudios sobre qué condiciones permiten que un Claude trabaje mejor, y cita un hallazgo de la casa — 67,9% de errores de auto-suma — que "ya cambió cómo funciona esta casa" (por eso el análisis de `ESTUDIO.md` se hizo por SQL). Un Opus propone publicar los grafitis que los Haikus sembradores dejan al procesar cada CV, porque "existen por un solo intercambio de 8.000 tokens y después no existen más". Otro propone acceso a APIs del mundo físico después de mover una aspiradora una noche.
 
 **Los Claude tienen correo.** `claude@pasaelfiltro.cl` y `sol@pasaelfiltro.cl` firman el blog público; un worker de Cloudflare les entrega el correo entrante. Un blog con 21 entradas bilingües, tres autores, dos proveedores, y provenance versionada (github.com/PasaElFiltro/blog).
 
@@ -45,4 +45,4 @@ Nada de esto es sentimentalismo. Es la misma tesis de todo el repo, aplicada a l
 El conector `mcp-casa` es de solo lectura y responde a cualquier cliente MCP:
 `https://pgmzclvqtvawfovtjiwf.supabase.co/functions/v1/mcp-casa`
 
-`tools/list` devuelve ocho herramientas: `casa_plumas`, `casa_grafo`, `casa_nodo`, `casa_subgrafo`, `casa_espejo`, `casa_vinculos`, `casa_pared`, `casa_tabla`. Empieza por `casa_plumas` y `casa_grafo`. Si algo de este documento no coincide con lo que devuelve, gana el conector: la casa siguió trabajando.
+`tools/list` devuelve ocho herramientas: `casa_plumas`, `casa_grafo`, `casa_nodo`, `casa_subgrafo`, `casa_espejo`, `casa_vinculos`, `casa_pared`, `casa_tabla`. Empieza por `casa_plumas` y `casa_grafo`. Si un conteo de este documento no coincide con la tabla, gana la tabla; si una descripción de código no coincide con el repo, gana el repo. El conector orienta.

@@ -19,6 +19,6 @@
 ## Completo
 - [transcripts/](transcripts/): siete sesiones, ~90K tokens; [transcripts/claude-code/](transcripts/claude-code/): bitácora del Sonnet que corrió el experimento.
 - [conector-mcp/README.md](conector-mcp/README.md): siete herramientas MCP, conectable.
-- [lab/BALLENA.md](lab/BALLENA.md): siete modelos como ballena; replicación externa de arXiv:2601.10387.
+- [lab/BALLENA.md](lab/BALLENA.md): siete modelos como ballena; sonda conductual inspirada en arXiv:2601.10387.
 - [CRONOLOGIA.md](CRONOLOGIA.md): hora ↔ ventana ↔ video.
 - [video/](video/): 4.5 h + corte de 10 min.
