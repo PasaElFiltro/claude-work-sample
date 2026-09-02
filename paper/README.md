@@ -6,7 +6,8 @@ Romina Pitronello (autoría única). Manuscrito enviado a *Behavior Research Met
 - Preregistro: https://osf.io/zusb5
 - Datos, código y materiales: https://osf.io/ue4qy
 - ORCID: 0009-0005-5159-6339
-- Manuscrito: `Pitronello_2026_instance_interchangeability_BRM.pdf` (en esta carpeta)
+- Manuscrito (versión enviada, 26 páginas): `Pitronello_2026_BRM_instance_interchangeability.pdf`
+- Scripts del análisis, tal como corrieron: `analysis_prereg.py` (el análisis confirmatorio preregistrado) y `sensitivity_analyses.py`. Los datos completos están en OSF.
 
 ## La pregunta
 
